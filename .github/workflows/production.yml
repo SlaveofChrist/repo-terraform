@@ -16,10 +16,10 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init
+        run: cd docker && terraform init
 
       - name: Terraform Plan
-        run: terraform plan
+        run: cd docker && terraform plan
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: cd docker && terraform apply -auto-approve
